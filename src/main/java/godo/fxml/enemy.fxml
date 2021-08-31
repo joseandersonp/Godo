@@ -1,0 +1,529 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="884.0" prefWidth="740.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="godo.controller.EnemyController">
+   <children>
+      <HBox alignment="CENTER_LEFT" prefWidth="200.0" spacing="5.0">
+         <children>
+            <Label minWidth="45.0" text="Enemy:" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtEnemyName" prefHeight="25.0" prefWidth="243.0" />
+            <Button fx:id="btnBackEnemy" mnemonicParsing="false" onAction="#selectBackEnemy" text="&lt;&lt;" />
+            <ChoiceBox fx:id="cboxEnemy" prefWidth="40.0" />
+            <Button fx:id="btnNextEnemy" mnemonicParsing="false" onAction="#selectNextEnemy" text="&gt;&gt;" />
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="10.0" right="5.0" top="5.0" />
+         </padding>
+      </HBox>
+      <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" VBox.vgrow="ALWAYS">
+         <tabs>
+            <Tab text="Attributes">
+               <content>
+                  <ScrollPane fitToWidth="true">
+                     <content>
+                        <VBox>
+                           <children>
+                              <GridPane>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="172.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="300.0" minWidth="-Infinity" prefWidth="259.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="400.0" minWidth="-Infinity" prefWidth="290.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="280.0" />
+                                    <RowConstraints maxHeight="160.0" minHeight="-Infinity" prefHeight="160.0" valignment="TOP" vgrow="ALWAYS" />
+                                 </rowConstraints>
+                                 <children>
+                                    <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1">
+                                       <children>
+                                          <Label text="Element/Effect">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets left="5.0" right="5.0" top="5.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                          <GridPane hgap="5.0" style="-fx-border-color: #ccc;">
+                                             <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                             </columnConstraints>
+                                             <rowConstraints>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                             </rowConstraints>
+                                             <children>
+                                                <ComboBox fx:id="cboxElementRate1" prefWidth="150.0" GridPane.columnIndex="1" />
+                                                <ComboBox fx:id="cboxElementRate2" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                <ComboBox fx:id="cboxElementRate3" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                <ComboBox fx:id="cboxElementRate4" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                <ComboBox fx:id="cboxElementRate8" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                                                <ComboBox fx:id="cboxElementRate6" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                                <ComboBox fx:id="cboxElementRate5" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                                <ComboBox fx:id="cboxElementType1" prefWidth="150.0" />
+                                                <ComboBox fx:id="cboxElementRate7" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                                <ComboBox fx:id="cboxElementType2" prefWidth="150.0" GridPane.rowIndex="1" />
+                                                <ComboBox fx:id="cboxElementType4" prefWidth="150.0" GridPane.rowIndex="3" />
+                                                <ComboBox fx:id="cboxElementType3" prefWidth="150.0" GridPane.rowIndex="2" />
+                                                <ComboBox fx:id="cboxElementType8" prefWidth="150.0" GridPane.rowIndex="7" />
+                                                <ComboBox fx:id="cboxElementType5" prefWidth="150.0" GridPane.rowIndex="4" />
+                                                <ComboBox fx:id="cboxElementType6" prefWidth="150.0" GridPane.rowIndex="5" />
+                                                <ComboBox fx:id="cboxElementType7" prefWidth="150.0" GridPane.rowIndex="6" />
+                                             </children>
+                                             <padding>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </padding>
+                                             <VBox.margin>
+                                                <Insets bottom="5.0" right="5.0" top="5.0" />
+                                             </VBox.margin>
+                                          </GridPane>
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2">
+                                       <children>
+                                          <Label text="Status Immunities">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets left="5.0" right="5.0" top="5.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                          <GridPane style="-fx-border-color: #ccc;">
+                                             <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                             </columnConstraints>
+                                             <rowConstraints>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                             </rowConstraints>
+                                             <children>
+                                                <CheckBox fx:id="ckbConfu" mnemonicParsing="false" text="Confusion" GridPane.rowIndex="6" />
+                                                <CheckBox fx:id="ckbDeathForce" mnemonicParsing="false" text="DeathForce" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+                                                <CheckBox fx:id="ckbShield" mnemonicParsing="false" text="Shield" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                                                <CheckBox fx:id="ckbFrog" mnemonicParsing="false" text="Frog" GridPane.columnIndex="1" />
+                                                <CheckBox fx:id="ckbDualDrain" mnemonicParsing="false" text="Dual Drain" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                                                <CheckBox fx:id="ckbDual" mnemonicParsing="false" text="Dual" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                                                <CheckBox fx:id="ckbStop" mnemonicParsing="false" text="Stop" GridPane.rowIndex="10" />
+                                                <CheckBox fx:id="ckbPoison" mnemonicParsing="false" text="Poison" GridPane.rowIndex="3" />
+                                                <CheckBox fx:id="ckbImprisioned" mnemonicParsing="false" text="Imprisoned" GridPane.columnIndex="2" GridPane.rowIndex="9" />
+                                                <CheckBox fx:id="ckbPetrify" mnemonicParsing="false" text="Petrify" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                <CheckBox fx:id="ckbSlowNumb" mnemonicParsing="false" text="Slow Numb" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                <CheckBox fx:id="ckbResist" mnemonicParsing="false" text="Resist" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+                                                <CheckBox fx:id="ckbSadness" mnemonicParsing="false" text="Sadness" GridPane.rowIndex="4" />
+                                                <CheckBox fx:id="ckbFury" mnemonicParsing="false" text="Fury" GridPane.rowIndex="5" />
+                                                <CheckBox fx:id="ckbDSentence" mnemonicParsing="false" text="D.Sentence" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+                                                <CheckBox fx:id="ckbSmall" mnemonicParsing="false" text="Small" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                <CheckBox fx:id="ckbNearDeath" mnemonicParsing="false" text="Near Death" GridPane.rowIndex="1" />
+                                                <CheckBox fx:id="ckbBerserk" mnemonicParsing="false" text="Berserk" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                                <CheckBox fx:id="ckbReflect" mnemonicParsing="false" text="Reflect" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                                                <CheckBox fx:id="ckbSlow" mnemonicParsing="false" text="Slow" GridPane.rowIndex="9" />
+                                                <CheckBox fx:id="ckbHaste" mnemonicParsing="false" text="Haste" GridPane.rowIndex="8" />
+                                                <CheckBox fx:id="ckbRegen" mnemonicParsing="false" text="Regen" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                                <CheckBox fx:id="ckbSleep" mnemonicParsing="false" text="Sleep" GridPane.rowIndex="2" />
+                                                <CheckBox fx:id="ckbManipulate" mnemonicParsing="false" text="Manipulate" GridPane.columnIndex="2" />
+                                                <CheckBox fx:id="ckbBarrier" mnemonicParsing="false" text="Barrier" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                                <CheckBox fx:id="ckbSilence" mnemonicParsing="false" text="Silence" GridPane.rowIndex="7" />
+                                                <CheckBox fx:id="ckbDeath" mnemonicParsing="false" text="Death" />
+                                                <CheckBox fx:id="ckbMBarrier" mnemonicParsing="false" text="M.Barrier" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                                <CheckBox fx:id="ckbPeerless" mnemonicParsing="false" text="Peerless" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                                                <CheckBox fx:id="ckbParalysis" mnemonicParsing="false" text="Paralysis" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                                                <CheckBox fx:id="ckbDarkness" mnemonicParsing="false" text="Darkness" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                                                <CheckBox fx:id="ckbLuckyGirl" mnemonicParsing="false" text="&quot;Lucky Girl&quot;" GridPane.columnIndex="2" GridPane.rowIndex="8" />
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets bottom="5.0" right="5.0" top="5.0" />
+                                             </VBox.margin>
+                                             <padding>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </padding>
+                                          </GridPane>
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                       <children>
+                                          <Label text="Reward">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets left="5.0" right="5.0" top="5.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                          <GridPane style="-fx-border-color: #ccc;">
+                                            <columnConstraints>
+                                              <ColumnConstraints hgrow="NEVER" minWidth="10.0" prefWidth="100.0" />
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                             <children>
+                                                <Label text="EXP:" />
+                                                <Spinner fx:id="spnEXP" editable="true" GridPane.columnIndex="1" GridPane.halignment="RIGHT" />
+                                                <Spinner fx:id="spnGil" editable="true" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
+                                                <Label text="Gil:" GridPane.rowIndex="1" />
+                                                <Label text="AP:" GridPane.rowIndex="2" />
+                                                <Spinner fx:id="spnAP" editable="true" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+                                                <Label text="Morph Item:" GridPane.rowIndex="3" />
+                                                <ComboBox fx:id="cboxMorphItem" prefWidth="150.0" GridPane.columnSpan="2" GridPane.halignment="RIGHT" GridPane.rowIndex="3" />
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </VBox.margin>
+                                             <padding>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </padding>
+                                          </GridPane>
+                                       </children>
+                                    </VBox>
+                                    <VBox GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                       <children>
+                                          <Label text="Item Drop/Steal Rates (MAX 63)">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets left="5.0" right="5.0" top="5.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                          <GridPane hgap="5.0" style="-fx-border-color: #ccc;" vgap="5.0">
+                                             <columnConstraints>
+                                                <ColumnConstraints hgrow="ALWAYS" maxWidth="235.0" minWidth="10.0" prefWidth="134.0" />
+                                                <ColumnConstraints hgrow="NEVER" maxWidth="115.0" minWidth="10.0" prefWidth="63.0" />
+                                                <ColumnConstraints hgrow="NEVER" maxWidth="78.0" minWidth="10.0" prefWidth="51.0" />
+                                             </columnConstraints>
+                                             <rowConstraints>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                             </rowConstraints>
+                                             <children>
+                                                <ComboBox fx:id="cboxItemDrop1" maxWidth="235.0" prefWidth="150.0" />
+                                                <ComboBox fx:id="cboxItemDrop2" maxWidth="235.0" prefWidth="150.0" GridPane.rowIndex="1" />
+                                                <ComboBox fx:id="cboxItemDrop3" maxWidth="235.0" prefWidth="150.0" GridPane.rowIndex="2" />
+                                                <ComboBox fx:id="cboxItemDrop4" maxWidth="235.0" prefWidth="150.0" GridPane.rowIndex="3" />
+                                                <Spinner fx:id="spnItemRate1" editable="true" GridPane.columnIndex="1" />
+                                                <Spinner fx:id="spnItemRate4" editable="true" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                <Spinner fx:id="spnItemRate3" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                <Spinner fx:id="spnItemRate2" editable="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                <CheckBox fx:id="ckbSteal2" mnemonicParsing="false" text="Steal" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                                <CheckBox fx:id="ckbSteal3" mnemonicParsing="false" text="Steal" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                                                <CheckBox fx:id="ckbSteal4" mnemonicParsing="false" text="Steal" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                                                <CheckBox fx:id="ckbSteal1" mnemonicParsing="false" text="Steal" GridPane.columnIndex="2" />
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </VBox.margin>
+                                             <padding>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </padding>
+                                          </GridPane>
+                                       </children>
+                                    </VBox>
+                                    <VBox GridPane.rowSpan="2147483647">
+                                       <children>
+                                          <Label text="General">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets left="5.0" right="5.0" top="5.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                          <GridPane style="-fx-border-color: #CCC;">
+                                             <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="80.0" minWidth="10.0" prefWidth="77.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="60.0" minWidth="10.0" prefWidth="52.0" />
+                                             </columnConstraints>
+                                             <rowConstraints>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="0.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="31.0" minHeight="7.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                             </rowConstraints>
+                                             <children>
+                                                <Spinner fx:id="spnLevel" editable="true" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
+                                                <Spinner fx:id="spnSpeed" editable="true" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                                <Spinner fx:id="spnMP" editable="true" prefHeight="25.0" prefWidth="75.0" GridPane.columnSpan="2" GridPane.halignment="RIGHT" GridPane.rowIndex="3" />
+                                                <Spinner fx:id="spnLuck" editable="true" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                                <Spinner fx:id="spnEvade" editable="true" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                                                <Spinner fx:id="spnStrength" editable="true" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                                                <Spinner fx:id="spnDefense" editable="true" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                                                <Spinner fx:id="spnMDefense" editable="true" GridPane.columnIndex="1" GridPane.rowIndex="11" />
+                                                <Spinner fx:id="spnBDamage" editable="true" GridPane.columnIndex="1" GridPane.rowIndex="12" />
+                                                <Spinner fx:id="spnMagic" editable="true" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+                                                <Label text="HP:" GridPane.rowIndex="2" />
+                                                <Label text="MP:" GridPane.rowIndex="3" />
+                                                <Label text="Evade:" GridPane.rowIndex="7" />
+                                                <Label text="Luck:" GridPane.rowIndex="6" />
+                                                <Label text="Speed:" GridPane.rowIndex="5" />
+                                                <Label text="Strength:" GridPane.rowIndex="8" />
+                                                <Label text="Defense:" GridPane.rowIndex="9" />
+                                                <Label text="Back Damage:" GridPane.rowIndex="12" />
+                                                <Label text="Magic:" GridPane.rowIndex="10" />
+                                                <Label text="M. Defense:" GridPane.rowIndex="11" />
+                                                <Label text="Level:" GridPane.rowIndex="1" />
+                                                <Spinner fx:id="spnHP" editable="true" prefHeight="25.0" prefWidth="100.0" GridPane.columnSpan="2" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+                                                <Label text="ID:" />
+                                                <Spinner fx:id="spnID" prefHeight="25.0" prefWidth="75.0" GridPane.columnSpan="2" GridPane.halignment="RIGHT" />
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </VBox.margin>
+                                             <padding>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </padding>
+                                          </GridPane>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </GridPane>
+                              <HBox>
+                                 <children>
+                                    <VBox maxWidth="695.0" prefHeight="349.0" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Label text="Attack Assign">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets left="5.0" right="5.0" top="5.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                          <GridPane hgap="3.0" style="-fx-border-color: #ccc;" vgap="3.0">
+                                             <columnConstraints>
+                                                <ColumnConstraints halignment="RIGHT" hgrow="NEVER" minWidth="10.0" prefWidth="10.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="NEVER" minWidth="10.0" prefWidth="60.0" />
+                                                <ColumnConstraints hgrow="NEVER" minWidth="10.0" prefWidth="75.0" />
+                                                <ColumnConstraints halignment="RIGHT" hgrow="NEVER" minWidth="20.0" prefWidth="20.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="NEVER" minWidth="10.0" prefWidth="60.0" />
+                                                <ColumnConstraints hgrow="NEVER" minWidth="10.0" prefWidth="75.0" />
+                                             </columnConstraints>
+                                             <rowConstraints>
+                                                <RowConstraints minHeight="10.0" prefHeight="15.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                             </rowConstraints>
+                                             <children>
+                                                <ComboBox fx:id="cboxAttack11" prefWidth="185.0" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+                                                <ComboBox fx:id="cboxAttack9" prefWidth="185.0" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+                                                <ComboBox fx:id="cboxAttack15" prefWidth="185.0" GridPane.columnIndex="5" GridPane.rowIndex="7" />
+                                                <ComboBox fx:id="cboxAttack13" prefWidth="185.0" GridPane.columnIndex="5" GridPane.rowIndex="5" />
+                                                <ComboBox fx:id="cboxAttack14" prefWidth="185.0" GridPane.columnIndex="5" GridPane.rowIndex="6" />
+                                                <ComboBox fx:id="cboxAttack12" prefWidth="185.0" GridPane.columnIndex="5" GridPane.rowIndex="4" />
+                                                <ComboBox fx:id="cboxAttack10" prefWidth="185.0" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+                                                <Label text="Attack:" GridPane.columnIndex="5" />
+                                                <Label text="Animation:" GridPane.columnIndex="6" />
+                                                <Label text="Camera:" GridPane.columnIndex="7" />
+                                                <ComboBox fx:id="cboxAttack16" prefWidth="185.0" GridPane.columnIndex="5" GridPane.rowIndex="8" />
+                                                <Label text="9:" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                                                <Label text="10:" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                                                <Label text="11:" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                                                <Label text="12:" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+                                                <Label text="13:" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+                                                <Label text="14:" GridPane.columnIndex="4" GridPane.rowIndex="6" />
+                                                <Label text="15:" GridPane.columnIndex="4" GridPane.rowIndex="7" />
+                                                <Label text="16:" GridPane.columnIndex="4" GridPane.rowIndex="8" />
+                                                <Label text="1:" GridPane.rowIndex="1" />
+                                                <Label text="2:" GridPane.rowIndex="2" />
+                                                <Label text="3:" GridPane.rowIndex="3" />
+                                                <Label text="4:" GridPane.rowIndex="4" />
+                                                <Label text="5:" GridPane.rowIndex="5" />
+                                                <Label text="6:" GridPane.rowIndex="6" />
+                                                <Label text="7:" GridPane.rowIndex="7" />
+                                                <Label text="8:" GridPane.rowIndex="8" />
+                                                <Label text="Attack:" GridPane.columnIndex="1" />
+                                                <Label text="Animation:" GridPane.columnIndex="2" />
+                                                <Label text="Camera:" GridPane.columnIndex="3">
+                                                   <GridPane.margin>
+                                                      <Insets />
+                                                   </GridPane.margin>
+                                                </Label>
+                                                <ComboBox fx:id="cboxAttack3" prefWidth="185.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                <ComboBox fx:id="cboxAttack1" prefWidth="185.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                <ComboBox fx:id="cboxAttack5" prefWidth="185.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                                <ComboBox fx:id="cboxAttack6" prefWidth="185.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                                <ComboBox fx:id="cboxAttack4" prefWidth="185.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                                <ComboBox fx:id="cboxAttack2" prefWidth="185.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                <ComboBox fx:id="cboxAttack7" prefWidth="185.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                                                <ComboBox fx:id="cboxAttack8" prefWidth="185.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                                                <Spinner fx:id="spnCam3" editable="true" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                                                <Spinner fx:id="spnCam4" editable="true" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                                                <Spinner fx:id="spnCam5" editable="true" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+                                                <Spinner fx:id="spnCam6" editable="true" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+                                                <Spinner fx:id="spnCam7" editable="true" GridPane.columnIndex="3" GridPane.rowIndex="7" />
+                                                <Spinner fx:id="spnCam8" editable="true" GridPane.columnIndex="3" GridPane.rowIndex="8" />
+                                                <Spinner fx:id="spnCam9" editable="true" GridPane.columnIndex="7" GridPane.rowIndex="1" />
+                                                <Spinner fx:id="spnCam10" editable="true" GridPane.columnIndex="7" GridPane.rowIndex="2" />
+                                                <Spinner fx:id="spnCam11" editable="true" GridPane.columnIndex="7" GridPane.rowIndex="3" />
+                                                <Spinner fx:id="spnCam12" editable="true" GridPane.columnIndex="7" GridPane.rowIndex="4" />
+                                                <Spinner fx:id="spnCam13" editable="true" GridPane.columnIndex="7" GridPane.rowIndex="5" />
+                                                <Spinner fx:id="spnCam14" editable="true" GridPane.columnIndex="7" GridPane.rowIndex="6" />
+                                                <Spinner fx:id="spnCam15" editable="true" GridPane.columnIndex="7" GridPane.rowIndex="7" />
+                                                <Spinner fx:id="spnCam2" editable="true" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                                                <Spinner fx:id="spnCam16" editable="true" GridPane.columnIndex="7" GridPane.rowIndex="8" />
+                                                <Spinner fx:id="spnCam1" editable="true" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                                                <Spinner fx:id="spnAnim1" editable="true" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                                <Spinner fx:id="spnAnim2" editable="true" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                                                <Spinner fx:id="spnAnim3" editable="true" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                                                <Spinner fx:id="spnAnim4" editable="true" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                                                <Spinner fx:id="spnAnim5" editable="true" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                                                <Spinner fx:id="spnAnim6" editable="true" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+                                                <Spinner fx:id="spnAnim7" editable="true" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+                                                <Spinner fx:id="spnAnim8" editable="true" GridPane.columnIndex="2" GridPane.rowIndex="8" />
+                                                <Spinner fx:id="spnAnim10" editable="true" GridPane.columnIndex="6" GridPane.rowIndex="2" />
+                                                <Spinner fx:id="spnAnim11" editable="true" GridPane.columnIndex="6" GridPane.rowIndex="3" />
+                                                <Spinner fx:id="spnAnim12" editable="true" GridPane.columnIndex="6" GridPane.rowIndex="4" />
+                                                <Spinner fx:id="spnAnim13" editable="true" GridPane.columnIndex="6" GridPane.rowIndex="5" />
+                                                <Spinner fx:id="spnAnim14" editable="true" GridPane.columnIndex="6" GridPane.rowIndex="6" />
+                                                <Spinner fx:id="spnAnim15" editable="true" GridPane.columnIndex="6" GridPane.rowIndex="7" />
+                                                <Spinner fx:id="spnAnim16" editable="true" GridPane.columnIndex="6" GridPane.rowIndex="8" />
+                                                <Spinner fx:id="spnAnim9" editable="true" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+                                             </children>
+                                             <padding>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </padding>
+                                             <VBox.margin>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </VBox.margin>
+                                          </GridPane>
+                                       </children>
+                                    </VBox>
+                                    <VBox maxWidth="175.0" minHeight="-Infinity" minWidth="120.0" prefWidth="50.0" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Label text="Manipulate Attack">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets left="5.0" right="5.0" top="5.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                          <VBox prefWidth="133.0" spacing="5.0" style="-fx-border-color: #ccc;">
+                                             <children>
+                                                <ComboBox fx:id="cboxManipAttk1" prefHeight="25.0" prefWidth="150.0" />
+                                                <ComboBox fx:id="cboxManipAttk2" prefWidth="150.0" />
+                                                <ComboBox fx:id="cboxManipAttk3" prefWidth="150.0" />
+                                             </children>
+                                             <opaqueInsets>
+                                                <Insets />
+                                             </opaqueInsets>
+                                             <padding>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </padding>
+                                             <VBox.margin>
+                                                <Insets bottom="5.0" right="5.0" top="5.0" />
+                                             </VBox.margin>
+                                          </VBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </content>
+                  </ScrollPane>
+               </content>
+            </Tab>
+            <Tab text="Artificial Inteligence">
+               <content>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <HBox prefHeight="812.0" prefWidth="740.0" spacing="5.0">
+                           <children>
+                              <ListView fx:id="listvCodeSection" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="410.0" prefWidth="177.0" HBox.hgrow="NEVER" />
+                              <TextArea fx:id="txtAreaCode" prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                                 <font>
+                                    <Font name="Consolas Bold" size="14.0" />
+                                 </font>
+                              </TextArea>
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </HBox>
+                        <Separator prefWidth="200.0" />
+                        <ButtonBar prefHeight="40.0" prefWidth="200.0">
+                          <buttons>
+                            <Button mnemonicParsing="false" onAction="#applyChanges" text="Apply Changes" />
+                          </buttons>
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </VBox.margin>
+                        </ButtonBar>
+                     </children>
+                  </VBox>
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+   </children>
+</VBox>

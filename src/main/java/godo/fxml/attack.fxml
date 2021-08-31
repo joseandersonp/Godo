@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="godo.controller.AttackController">
+   <children>
+      <ScrollPane fitToHeight="true" layoutX="141.0" layoutY="10.0" style="-fx-background-color: transparent;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="135.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <content>
+            <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity">
+               <children>
+                  <VBox>
+                     <children>
+                        <FlowPane prefWidth="526.0">
+                           <children>
+                              <Label text="Name:">
+                                 <FlowPane.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </FlowPane.margin>
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="txtName" prefHeight="25.0" prefWidth="249.0">
+                                 <FlowPane.margin>
+                                    <Insets bottom="10.0" left="5.0" right="5.0" top="10.0" />
+                                 </FlowPane.margin>
+                              </TextField>
+                           </children>
+                        </FlowPane>
+                        <HBox prefHeight="367.0" prefWidth="580.0">
+                           <children>
+                              <VBox>
+                                 <children>
+                                    <Label text="General">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets left="5.0" right="5.0" top="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <GridPane style="-fx-border-color: #ccc;" VBox.vgrow="ALWAYS">
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                       <children>
+                                          <Label text="MP costs:" GridPane.rowIndex="3" />
+                                          <Label text="Strength:" GridPane.rowIndex="2" />
+                                          <Label text="Attack %:" GridPane.rowIndex="1" />
+                                          <Label text="Animation ID:" GridPane.rowIndex="4" />
+                                          <Label text="Target Animation:" GridPane.rowIndex="6" />
+                                          <Label text="Impact Animation:" GridPane.rowIndex="5" />
+                                          <Label text="Impact Sound:" GridPane.rowIndex="7" />
+                                          <Label text="Camera Single:" GridPane.rowIndex="8" />
+                                          <Label text="Camera Multiple:" GridPane.rowIndex="9" />
+                                          <Label text="ID:" />
+                                          <Spinner fx:id="spnID" editable="true" GridPane.columnIndex="1" />
+                                          <Spinner fx:id="spnAttackPerc" editable="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                          <Spinner fx:id="spnStrengh" editable="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                          <Spinner fx:id="spnMPCosts" editable="true" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                          <Spinner fx:id="spnAnimationID" editable="true" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                          <Spinner fx:id="spnImpactAnimation" editable="true" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                          <Spinner fx:id="spnTargetAnimation" editable="true" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                          <Spinner fx:id="spnImpactSound" editable="true" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                                          <Spinner fx:id="spnCameraSingle" editable="true" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                                          <Spinner fx:id="spnCameraMultiple" editable="true" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </VBox.margin>
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </padding>
+                                    </GridPane>
+                                 </children>
+                              </VBox>
+                              <VBox HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Label text="Attack Target">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets left="5.0" right="5.0" top="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <GridPane minHeight="-Infinity" prefHeight="108.0" prefWidth="284.0" style="-fx-border-color: #ccc;">
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                       <children>
+                                          <CheckBox fx:id="ckbToggleMultiple" mnemonicParsing="false" text="Toggle Multiple" GridPane.rowIndex="4" />
+                                          <CheckBox fx:id="ckbOneRowOnly" mnemonicParsing="false" text="One Row Only" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                          <CheckBox fx:id="ckbStartOnEnemies" mnemonicParsing="false" text="Start on Enemies" GridPane.rowIndex="2" />
+                                          <CheckBox fx:id="ckbShortRange" mnemonicParsing="false" text="Short Range" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                          <CheckBox fx:id="ckbStartAsMultiple" mnemonicParsing="false" text="Start as Multiple" GridPane.rowIndex="3" />
+                                          <CheckBox fx:id="ckbAllRows" mnemonicParsing="false" text="All Rows" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                             <GridPane.margin>
+                                                <Insets />
+                                             </GridPane.margin>
+                                          </CheckBox>
+                                          <CheckBox fx:id="ckbRandom" mnemonicParsing="false" text="Random" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                          <CheckBox fx:id="ckbEnableSelection" mnemonicParsing="false" text="Enable Selection" GridPane.rowIndex="1" />
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </VBox.margin>
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </padding>
+                                    </GridPane>
+                                    <Label text="Element">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets left="5.0" right="5.0" top="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <GridPane minHeight="170.0" prefHeight="211.0" prefWidth="284.0" style="-fx-border-color: #ccc;" VBox.vgrow="NEVER">
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                       <children>
+                                          <CheckBox fx:id="ckbElemBolt" mnemonicParsing="false" text="Bolt" GridPane.rowIndex="3" />
+                                          <CheckBox fx:id="ckbElemPoison" mnemonicParsing="false" text="Poison" GridPane.rowIndex="5" />
+                                          <CheckBox fx:id="ckbElemHoly" mnemonicParsing="false" text="Holy" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                          <CheckBox fx:id="ckbElemPunch" mnemonicParsing="false" text="Punch" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                          <CheckBox fx:id="ckbElemIce" mnemonicParsing="false" text="Ice" GridPane.rowIndex="2" />
+                                          <CheckBox fx:id="ckbElemHealth" mnemonicParsing="false" text="Health" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                          <CheckBox fx:id="ckbElemCut" mnemonicParsing="false" text="Cut" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                          <CheckBox fx:id="ckbElemGravity" mnemonicParsing="false" text="Gravity" GridPane.rowIndex="6" />
+                                          <CheckBox fx:id="ckbElemWater" mnemonicParsing="false" text="Water" GridPane.rowIndex="7" />
+                                          <CheckBox fx:id="ckbElemFire" mnemonicParsing="false" text="Fire" GridPane.rowIndex="1" />
+                                          <CheckBox fx:id="ckbElemShoot" mnemonicParsing="false" text="Shoot" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                          <CheckBox fx:id="ckbElemShout" mnemonicParsing="false" text="Shout" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                                          <CheckBox fx:id="ckbElemEarth" mnemonicParsing="false" text="Earth" GridPane.rowIndex="4" />
+                                          <CheckBox fx:id="ckbElemWind" mnemonicParsing="false" text="Wind" GridPane.rowIndex="8" />
+                                          <CheckBox fx:id="ckbElemHit" mnemonicParsing="false" text="Hit" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                          <CheckBox fx:id="ckbElemHidden" mnemonicParsing="false" text="&quot;Hidden&quot;" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </VBox.margin>
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </padding>
+                                    </GridPane>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <Label text="Special Properties">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="5.0" right="5.0" top="5.0" />
+                           </VBox.margin>
+                        </Label>
+                        <GridPane prefHeight="111.0" prefWidth="516.0" style="-fx-border-color: #ccc;">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <CheckBox fx:id="ckbPhysical" mnemonicParsing="false" text="Physical" GridPane.rowIndex="2" />
+                              <CheckBox fx:id="ckbDrainDmg" mnemonicParsing="false" text="Drain Dmg" GridPane.columnIndex="1" />
+                              <CheckBox fx:id="ckbMissIfNotDead" mnemonicParsing="false" text="Miss if not Dead" GridPane.columnIndex="2" />
+                              <CheckBox fx:id="ckbUnused2" mnemonicParsing="false" text="Unused" GridPane.columnIndex="3" />
+                              <CheckBox fx:id="ckbDummy1" mnemonicParsing="false" text="Dummy1" GridPane.rowIndex="1" />
+                              <CheckBox fx:id="ckbRefletable" mnemonicParsing="false" text="Refletable" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                              <CheckBox fx:id="ckbDefIgnoring" mnemonicParsing="false" text="Def. Ignoring" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                              <CheckBox fx:id="ckbDrainHPMP" mnemonicParsing="false" text="Drain HP/MP" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <CheckBox fx:id="ckbDummy2" mnemonicParsing="false" text="Dummy2" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <CheckBox fx:id="ckbAffectMP" mnemonicParsing="false" text="Affect MP" />
+                              <CheckBox fx:id="ckbCrtiticalHit" mnemonicParsing="false" text="Crtitical Hit" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                              <CheckBox fx:id="ckbUnused3" mnemonicParsing="false" text="Unused" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                              <CheckBox fx:id="ckbUnused1" mnemonicParsing="false" text="Unused" GridPane.rowIndex="3" />
+                              <CheckBox fx:id="ckbIgnoreStatDef" mnemonicParsing="false" text="Ignore Stat. Def." GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <CheckBox fx:id="ckbNoRetarget" mnemonicParsing="false" text="No Re-target" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                              <CheckBox fx:id="ckbUnused4" mnemonicParsing="false" text="Unused" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </VBox.margin>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </GridPane>
+                        <Label text="Status">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="5.0" right="5.0" top="5.0" />
+                           </VBox.margin>
+                        </Label>
+                        <GridPane prefHeight="240.0" prefWidth="516.0" style="-fx-border-color: #ccc;">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <CheckBox fx:id="ckbConfusion" mnemonicParsing="false" text="Confusion" GridPane.rowIndex="6" />
+                              <CheckBox fx:id="ckbDeathForce" mnemonicParsing="false" text="DeathForce" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                              <CheckBox fx:id="ckbShield" mnemonicParsing="false" text="Shield" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                              <CheckBox fx:id="ckbFrog" mnemonicParsing="false" text="Frog" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <CheckBox fx:id="ckbDualDrain" mnemonicParsing="false" text="Dual Drain" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                              <CheckBox fx:id="ckbDual" mnemonicParsing="false" text="Dual" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                              <CheckBox fx:id="ckbStop" mnemonicParsing="false" text="Stop" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <CheckBox fx:id="ckbPoison" mnemonicParsing="false" text="Poison" GridPane.rowIndex="3" />
+                              <CheckBox fx:id="ckbImprisoned" mnemonicParsing="false" text="Imprisoned" GridPane.columnIndex="3" GridPane.rowIndex="7" />
+                              <CheckBox fx:id="ckbPetrify" mnemonicParsing="false" text="Petrify" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                              <CheckBox fx:id="ckbSlowNumb" mnemonicParsing="false" text="Slow Numb" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                              <CheckBox fx:id="ckbResist" mnemonicParsing="false" text="Resist" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+                              <CheckBox fx:id="ckbSadness" mnemonicParsing="false" text="Sadness" GridPane.rowIndex="4" />
+                              <CheckBox fx:id="ckbFury" mnemonicParsing="false" text="Fury" GridPane.rowIndex="5" />
+                              <CheckBox fx:id="ckbDSentence" mnemonicParsing="false" text="D.Sentence" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                              <CheckBox fx:id="ckbSmall" mnemonicParsing="false" text="Small" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              <CheckBox fx:id="ckbNearDeath" mnemonicParsing="false" text="Near Death" GridPane.rowIndex="1" />
+                              <CheckBox fx:id="ckbBerserk" mnemonicParsing="false" text="Berserk" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+                              <CheckBox fx:id="ckbReflect" mnemonicParsing="false" text="Reflect" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                              <CheckBox fx:id="ckbSlow" mnemonicParsing="false" text="Slow" GridPane.columnIndex="1" />
+                              <CheckBox fx:id="ckbHaste" mnemonicParsing="false" text="Haste" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <CheckBox fx:id="ckbRegen" mnemonicParsing="false" text="Regen" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                              <CheckBox fx:id="ckbSleep" mnemonicParsing="false" text="Sleep" GridPane.rowIndex="2" />
+                              <CheckBox fx:id="ckbManipulate" mnemonicParsing="false" text="Manipulate" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+                              <CheckBox fx:id="ckbBarrier" mnemonicParsing="false" text="Barrier" GridPane.columnIndex="2" />
+                              <CheckBox fx:id="ckbSilence" mnemonicParsing="false" text="Silence" GridPane.rowIndex="7" />
+                              <CheckBox fx:id="ckbDeath" mnemonicParsing="false" text="Death" />
+                              <CheckBox fx:id="ckbMBarrier" mnemonicParsing="false" text="M.Barrier" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                              <CheckBox fx:id="ckbPeerless" mnemonicParsing="false" text="Peerless" GridPane.columnIndex="3" />
+                              <CheckBox fx:id="ckbParalysis" mnemonicParsing="false" text="Paralysis" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                              <CheckBox fx:id="ckbDarkness" mnemonicParsing="false" text="Darkness" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                              <CheckBox fx:id="ckbLuckyGirl" mnemonicParsing="false" text="&quot;Lucky Girl&quot;" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+                              <FlowPane alignment="CENTER_RIGHT" hgap="5.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="4" GridPane.rowIndex="9">
+                                 <children>
+                                    <ToggleButton fx:id="toggleTStatus" mnemonicParsing="false" text="Toggle Status" />
+                                    <ToggleButton fx:id="toggleRStatus" mnemonicParsing="false" text="Remove Status" />
+                                    <Separator orientation="VERTICAL" prefHeight="20.0" />
+                                    <Label text="Chance:">
+                                       <FlowPane.margin>
+                                          <Insets />
+                                       </FlowPane.margin>
+                                    </Label>
+                                    <Spinner fx:id="spnChance" editable="true" prefHeight="25.0" prefWidth="63.0" />
+                                 </children>
+                              </FlowPane>
+                              <Separator prefWidth="200.0" GridPane.columnSpan="4" GridPane.rowIndex="8" />
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </VBox.margin>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </GridPane>
+                        <Label text="Damage Calculation">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="5.0" right="5.0" top="5.0" />
+                           </VBox.margin>
+                        </Label>
+                        <GridPane style="-fx-border-color: #ccc;" vgap="5.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="108.0" minWidth="10.0" prefWidth="83.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="503.0" minWidth="10.0" prefWidth="465.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="0.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="0.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <ComboBox fx:id="cboxDamageConsideration" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" />
+                              <Label text="Consideration:" />
+                              <ComboBox fx:id="cboxDamageFormula" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Label text="Formula:" GridPane.rowIndex="1" />
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </VBox.margin>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </GridPane>
+                        <Label text="Special Effects">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="5.0" right="5.0" top="5.0" />
+                           </VBox.margin>
+                        </Label>
+                        <GridPane style="-fx-border-color: #ccc;" vgap="5.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="80.0" minWidth="10.0" prefWidth="53.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="503.0" minWidth="10.0" prefWidth="495.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints />
+                              <RowConstraints maxHeight="121.0" minHeight="0.0" prefHeight="16.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="0.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <ComboBox fx:id="cboxAdditionalEffect" maxWidth="1.7976931348623157E308" GridPane.columnSpan="2147483647" GridPane.rowIndex="2" GridPane.rowSpan="2147483647" GridPane.vgrow="ALWAYS" />
+                              <Label text="Effect:" GridPane.rowIndex="1">
+                                 <GridPane.margin>
+                                    <Insets />
+                                 </GridPane.margin>
+                              </Label>
+                              <Spinner fx:id="spnEffectModifier" editable="true" prefHeight="25.0" prefWidth="85.0" GridPane.columnIndex="1" />
+                              <Label text="Modifier:" />
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="5.0" right="5.0" top="5.0" />
+                           </VBox.margin>
+                        </GridPane>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </content>
+      </ScrollPane>
+      <AnchorPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ScrollPane fitToHeight="true" style="-fx-background-color: transparent;" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0">
+               <content>
+                  <VBox fillWidth="false">
+                     <children>
+                        <Label text="Attack List:">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="6.0" right="6.0" top="3.0" />
+                           </VBox.margin>
+                        </Label>
+                        <ListView fx:id="listvAttack" prefWidth="130.0" VBox.vgrow="ALWAYS">
+                           <VBox.margin>
+                              <Insets top="2.0" />
+                           </VBox.margin>
+                        </ListView>
+                     </children>
+                  </VBox>
+               </content>
+            </ScrollPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
